@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login authentication</title>
+    <link rel="stylesheet" href="Login.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login Validation using JavaScript</button>
+
+<div id ="id01" class="model">
+    <form class="modal-content animate" name="myForm">
+     <div class="imgcontainer" action="/Index.html">
+         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+         <img src="img_avatar2.png" alt="Avatar" class="avatar">
+     </div>
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username@server.com" name="uname" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required id="myInput">
+            <button type="submit" onclick="validateForm(document.myForm.uname)">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <label>
+                <input type="checkbox" onclick="showpaas()">Show Password
+            </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1; border-radius: 0 0 20px 20px">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+ </div>
+<script src="Login.js"></script>
+</body>
+</html>
